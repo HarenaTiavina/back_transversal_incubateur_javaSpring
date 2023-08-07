@@ -1,7 +1,12 @@
 package back_transversal.back_transversal.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Personne {
-    private int id;
+    @Id
+    private Long id;
     private String nom;
     private String prenom;
     private String adresse;
@@ -10,7 +15,7 @@ public class Personne {
 
     public Personne () {}
 
-   public Personne(int id, String nom, String prenom, String adresse, String mdp, String profil) {
+   public Personne(Long id, String nom, String prenom, String adresse, String mdp, String profil) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -20,16 +25,16 @@ public class Personne {
     }
 
     /**
-     * @return int return the id
+     * @return Long return the id
      */
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
