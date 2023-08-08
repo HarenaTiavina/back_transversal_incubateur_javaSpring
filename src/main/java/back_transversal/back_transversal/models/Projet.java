@@ -3,16 +3,16 @@ package back_transversal.back_transversal.models;
 import java.security.Timestamp;
 
 public class Projet {
-    private int id;
+    private Long id;
     private String nom;
     private String objectif;
-    private int idClient;
+    private Long idClient;
     private Timestamp datePostule;
     private double capital;
 
     public Projet () {}
 
-    public Projet(int id, String nom, String objectif, int idClient, Timestamp datePostule, double capital) {
+    public Projet(Long id, String nom, String objectif, Long idClient, Timestamp datePostule, double capital) {
         this.id = id;
         this.nom = nom;
         this.objectif = objectif;
@@ -22,16 +22,16 @@ public class Projet {
     }
 
     /**
-     * @return int return the id
+     * @return Long return the id
      */
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -64,16 +64,16 @@ public class Projet {
     }
 
     /**
-     * @return int return the idClient
+     * @return Long return the idClient
      */
-    public int getIdClient() {
+    public Long getIdClient() {
         return idClient;
     }
 
     /**
      * @param idClient the idClient to set
      */
-    public void setIdClient(int idClient) {
+    public void setIdClient(Long idClient) {
         this.idClient = idClient;
     }
 
