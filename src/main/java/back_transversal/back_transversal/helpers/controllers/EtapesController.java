@@ -41,7 +41,7 @@ public class EtapesController {
 
     @PostMapping
     public Etapes createEtapes(@RequestBody Etapes etapes) {
-        return this.createEtapes(etapes);
+        return this.etapesService.save(etapes);
     }
 
     @PutMapping(value="path/{id}")
