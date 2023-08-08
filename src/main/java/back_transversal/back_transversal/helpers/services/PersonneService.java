@@ -3,11 +3,12 @@ package back_transversal.back_transversal.helpers.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import back_transversal.back_transversal.helpers.interfaces.PersonneRepository;
 import back_transversal.back_transversal.models.Personne;
 
-
+@Service
 public class PersonneService {
     private final PersonneRepository personneRepository;
 
