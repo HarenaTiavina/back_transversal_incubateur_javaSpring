@@ -1,15 +1,15 @@
 package back_transversal.back_transversal.models;
 
 public class Taches {
-    private int id;
-    private int idEtapes;
+    private Long id;
+    private Long idEtapes;
     private String nom;
     private double depense;
     private int etat;
 
     
 
-    public Taches(int id, int idEtapes, String nom, double depense, int etat) {
+    public Taches(Long id, Long idEtapes, String nom, double depense, int etat) {
         this.id = id;
         this.idEtapes = idEtapes;
         this.nom = nom;
@@ -18,30 +18,30 @@ public class Taches {
     }
 
     /**
-     * @return int return the id
+     * @return Long return the id
      */
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
     /**
-     * @return int return the idEtapes
+     * @return Long return the idEtapes
      */
-    public int getIdEtapes() {
+    public Long getIdEtapes() {
         return idEtapes;
     }
 
     /**
      * @param idEtapes the idEtapes to set
      */
-    public void setIdEtapes(int idEtapes) {
+    public void setIdEtapes(Long idEtapes) {
         this.idEtapes = idEtapes;
     }
 
