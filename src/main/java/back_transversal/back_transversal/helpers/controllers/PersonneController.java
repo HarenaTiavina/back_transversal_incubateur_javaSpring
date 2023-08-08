@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import back_transversal.back_transversal.helpers.interfaces.PersonneRepository;
 import back_transversal.back_transversal.helpers.services.PersonneService;
 import back_transversal.back_transversal.models.Personne;
 

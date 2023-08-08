@@ -1,8 +1,8 @@
 package back_transversal.back_transversal.models;
 
 public class Etapes {
-    private int id;
-    private int idProjet;
+    private Long id;
+    private Long idProjet;
     private String nom;
     private double capitalE;
     private double capitalR;
@@ -10,7 +10,7 @@ public class Etapes {
     
     
 
-    public Etapes(int id, int idProjet, String nom, double capitalE, double capitalR, String observation) {
+    public Etapes(Long id, Long idProjet, String nom, double capitalE, double capitalR, String observation) {
         this.id = id;
         this.idProjet = idProjet;
         this.nom = nom;
@@ -20,30 +20,30 @@ public class Etapes {
     }
 
     /**
-     * @return int return the id
+     * @return Long return the id
      */
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
     /**
-     * @return int return the idProjet
+     * @return Long return the idProjet
      */
-    public int getIdProjet() {
+    public Long getIdProjet() {
         return idProjet;
     }
 
     /**
      * @param idProjet the idProjet to set
      */
-    public void setIdProjet(int idProjet) {
+    public void setIdProjet(Long idProjet) {
         this.idProjet = idProjet;
     }
 
