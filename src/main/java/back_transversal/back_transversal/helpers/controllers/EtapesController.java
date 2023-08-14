@@ -35,7 +35,7 @@ public class EtapesController {
     }
 
     @GetMapping(value="/{id}")
-    public Etapes getEtapeId(@RequestParam Long id) {
+    public Etapes getEtapeId(@PathVariable Long id) {
         return this.etapesService.getById(id);
     }
 

@@ -31,7 +31,7 @@ public class ProjetController {
     } 
 
     @GetMapping(value="/{id}") 
-    public Projet getProjetId (@RequestAttribute Long id) {
+    public Projet getProjetId (@PathVariable Long id) {
         return this.projetService.getProjet(id);
     }
 
