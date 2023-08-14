@@ -1,88 +1,67 @@
 package back_transversal.back_transversal.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+
+@Entity
 public class Taches {
+    @Id
     private Long id;
-    private Long idEtapes;
+    @OneToOne
+    @JoinColumn(name = "id_etapes")
+    private Etapes etapes;
     private String nom;
     private double depense;
     private int etat;
 
-    
+    public Taches () {}
 
-    public Taches(Long id, Long idEtapes, String nom, double depense, int etat) {
+    public Taches(Long id, Etapes etapes, String nom, double depense, int etat) {
         this.id = id;
-        this.idEtapes = idEtapes;
+        this.etapes = etapes;
         this.nom = nom;
         this.depense = depense;
         this.etat = etat;
     }
 
-    /**
-     * @return Long return the id
-     */
     public Long getId() {
         return id;
     }
 
-    /**
-     * @param id the id to set
-     */
     public void setId(Long id) {
         this.id = id;
     }
 
-    /**
-     * @return Long return the idEtapes
-     */
-    public Long getIdEtapes() {
-        return idEtapes;
+    public Etapes getEtapes() {
+        return etapes;
     }
 
-    /**
-     * @param idEtapes the idEtapes to set
-     */
-    public void setIdEtapes(Long idEtapes) {
-        this.idEtapes = idEtapes;
+    public void setEtapes(Etapes etapes) {
+        this.etapes = etapes;
     }
 
-    /**
-     * @return String return the nom
-     */
     public String getNom() {
         return nom;
     }
 
-    /**
-     * @param nom the nom to set
-     */
     public void setNom(String nom) {
         this.nom = nom;
     }
 
-    /**
-     * @return double return the depense
-     */
     public double getDepense() {
         return depense;
     }
 
-    /**
-     * @param depense the depense to set
-     */
     public void setDepense(double depense) {
         this.depense = depense;
     }
 
-    /**
-     * @return int return the etat
-     */
     public int getEtat() {
         return etat;
     }
 
-    /**
-     * @param etat the etat to set
-     */
     public void setEtat(int etat) {
         this.etat = etat;
     }

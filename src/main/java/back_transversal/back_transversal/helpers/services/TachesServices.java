@@ -35,7 +35,7 @@ public class TachesServices {
         return null;
     }
 
-    public void delete (Taches taches) {
-        this.tachesRepository.delete(taches);
+    public void delete (Long id) {
+        this.tachesRepository.deleteById(id);
     }
 }
