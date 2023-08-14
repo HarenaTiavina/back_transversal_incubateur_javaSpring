@@ -44,7 +44,7 @@ public class EtapesController {
         return this.etapesService.save(etapes);
     }
 
-    @PutMapping(value="path/{id}")
+    @PutMapping(value="/{id}")
     public Etapes updateEtape(@PathVariable Long id, @RequestBody Etapes etapes) {
         return this.etapesService.update(id, etapes);
     }
