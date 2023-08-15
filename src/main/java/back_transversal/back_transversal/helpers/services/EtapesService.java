@@ -2,7 +2,6 @@ package back_transversal.back_transversal.helpers.services;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import back_transversal.back_transversal.helpers.interfaces.EtapesRepository;
@@ -12,7 +11,6 @@ import back_transversal.back_transversal.models.Etapes;
 public class EtapesService {
     private final EtapesRepository etapesRepository;
 
-    @Autowired
     public EtapesService (EtapesRepository etapesRepository) {
         this.etapesRepository = etapesRepository;
     }
