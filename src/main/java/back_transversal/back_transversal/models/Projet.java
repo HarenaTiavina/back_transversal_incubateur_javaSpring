@@ -3,13 +3,19 @@ package back_transversal.back_transversal.models;
 import java.sql.Timestamp;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.SequenceGenerator;
 
 @Entity
 public class Projet {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "idProjet")
+@SequenceGenerator(name = "idProjet", sequenceName = "idProjet", allocationSize = 1)
+
     private Long id;
     private String nom;
     private String objectif;
@@ -18,16 +24,20 @@ public class Projet {
     private  Personne personne;
     private Timestamp datePostule;
     private double capital;
+    private String cahierCharge;
+    private int etat;
 
     public Projet () {}
 
-    public Projet(Long id, String nom, String objectif, Personne personne, Timestamp datePostule, double capital) {
+    public Projet(Long id, String nom, String objectif, Personne personne, Timestamp datePostule, double capital, String cahierCharge, int etat) {
         this.id = id;
         this.nom = nom;
         this.objectif = objectif;
         this.personne = personne;
         this.datePostule = datePostule;
         this.capital = capital;
+        this.cahierCharge = cahierCharge;
+        this.etat = etat;
     }
 
     public Long getId() {
@@ -78,6 +88,21 @@ public class Projet {
         this.capital = capital;
     }
 
+    public String getCahierCharge() {
+        return cahierCharge;
+    }
+
+    public void setCahierCharge(String cahierCharge) {
+        this.cahierCharge = cahierCharge;
+    }
+
+    public int getEtat() {
+        return etat;
+    }
+
+    public void setEtat(int etat) {
+        this.etat = etat;
+    }
+
     
-   
 }
